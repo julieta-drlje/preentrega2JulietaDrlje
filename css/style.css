@@ -1,0 +1,339 @@
+/*INDEX*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Estilos para header */
+
+.logo{
+    display: flex;
+    width: 100px;
+    padding: 10px;
+   
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+    height: 100px;
+    background-color: #ffc93b;
+    margin-bottom: 30px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Bebas Neue", serif;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 40px;
+    margin-right: 80px;
+}
+
+/*body*/
+
+body {
+    background-color: #bfff00
+}
+
+h1 {
+    color: rgb(255, 253, 253);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Estilos para imagen y titulo principal */
+.titulo {
+    background-image: url(https://superiorcads.edu.ar/imgd/certificacion-running-maraton-fondo-medio-fondo-trail-2-019334.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+}
+
+h2 {
+    color: rgb(252, 252, 249);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.texto-encabezado {
+    align-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+h3 {
+text-decoration: underline;
+font-size: 25px;
+color: rgb(252, 252, 249);
+padding: 0;
+text-align: center;
+margin-top: 50px;
+}
+
+
+h4 {
+font-size: 20px;
+text-decoration: underline;
+}
+
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* Estilos para html index profesionales*/
+.imagen-profesionales{
+    width: 100%;
+    height: 100%;
+}
+
+.nuestros-profesionales {
+    width: 350px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.caja {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10px;
+   text-align: center;
+}
+
+
+
+/* Estilos para html  grid alimentacion */
+.alimentacion{
+    display: flex;
+    text-align: center;
+    margin: 80px;
+    padding: 20px;
+    margin-left: 250px;
+
+}
+
+.buttons-alimentacion{
+    display: flex;
+    width: 30%;
+    background-color: #ffc93b;
+    margin-left: 110px;
+}
+
+.imagenes-alimentacion{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.texto-alimentacion{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10px;
+    color: black;
+    margin-right: 160px;
+}
+
+
+
+/* Estilos para html planificacion */
+.videos{
+    background-clip: url(https://www.freepik.es/video-gratis/vista-frontal-mujer-caucasica-atletico-afroamericano-gimnasio_2801828#fromView=search&page=1&position=25&uuid=711825ba-db94-445b-830c-7d711943a94c);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+}
+
+
+/* Estilos para iframe (mapa) */
+.mapa {
+    height: 500px;
+    width:80%;
+    padding: 50px;
+    display:inline;
+    margin-left: 150px;
+}
+
+
+
+/* Estilos para el formulario y etiquetas */
+.formulario {
+
+    
+form {
+    max-width: 400px;               
+    margin: 0 auto;                 
+    padding: 20px;                  
+    background-color: #ffc93b;     
+    border-radius: 8px;            
+    
+}
+
+label {
+    display: block;                 
+    margin-bottom: 10px;             
+    font-size: 14px;                
+}
+}
+
+
+
+
+/* Estilos para el footer*/
+.footer {
+    height: 400px;
+    display: flex;
+    background-color: #ffc93b;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+
+.imagen-redes-sociales {
+    width: 50px; 
+    height: 50px;
+    margin-left: 340px;
+}
+
+
+.logo-footer {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+
+/* Media Query para dispositivos móviles */
+/*index*/
+@media (max-width: 768px) {    
+    .logo {       
+        width: 80px;        
+        padding: 5px;
+    }  
+
+    header { 
+        flex-direction: column;      
+        height: auto; 
+        text-align: center;
+    }    
+    
+    li {     
+        font-size: 18px; 
+        margin-right: 10px;
+        margin-top: 10px; 
+    }
+
+    .titulo { 
+    height: 300px;       
+    background-position: top;
+    }
+
+    .nuestros-profesionales { 
+    width: 100%;        
+    padding: 10px;     
+    }    
+
+    .caja {        
+    width: 90%;        
+    height: auto;         
+    font-size: 12px; 
+    }    
+   
+   .contenedor {        
+    flex-direction: column;         
+    align-items: center;    
+    }
+    
+    .footer {
+        flex-direction: column;        
+        align-items: center;           
+        height: auto;                  
+        margin-top: 10%;               
+    }
+
+    .imagen-redes-sociales {
+        flex-direction: column;                 
+        margin-bottom: 10px;           
+        width: 40px;                   
+        height: 40px;                  
+    }
+
+    .logo-footer {
+        width: 120px;                  
+    }
+
+    .mapa {
+        width: 100%;            
+        margin-left: 0;         
+        padding: 20px;          
+    }
+   
+   
+    .formulario form {
+        max-width: 90%;         
+        padding: 15px;          
+    }
+
+    .formulario label {
+        font-size: 12px;        
+    }
+
+}
+
+
+/*contactanos
+@media (max-width: 768px) {
+        
+    
+
+    .footer {
+        flex-direction: column;        
+        align-items: center;          
+        height: auto;                 
+        margin-top: 10%;               
+    }
+
+    .imagen-redes-sociales {
+        margin-left: 0;                
+        margin-bottom: 10px;           
+        width: 40px;                   
+        height: 40px;                 
+    }
+
+    .logo-footer {
+        width: 120px;                  
+    }
+}*/
