@@ -1,0 +1,231 @@
+/*variables*/
+$background-body: #bfff00;
+
+/*mixin*/
+
+@mixin flex ($direction, $jcontent, $aitems){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jcontent;
+    align-items: $aitems;
+}
+
+/*condicional*/
+$season: ninguno;
+@if $season == maraton-boston {
+    .titulo {
+        background-image: url(../multimedia/maratondeboston.webp);
+    }
+}@else if $season == maraton-tokio {
+    .titulo {
+        background-image: url(../multimedia/maraton-tokio-2025-elites.jpg)
+    }
+}
+
+
+
+header { @include  flex (row, space-between, center);
+    /*justify-content: space-between;
+    display: flex;*/
+    height: 100px;
+    background-color: #ffc93b;
+    margin-bottom: 30px;
+}
+
+    .logo{
+        display: flex;
+        width: 100px;
+        padding: 10px;
+       
+    }
+    li {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: "Bebas Neue", serif;
+        text-transform: uppercase;
+        color: black;
+        margin-top: 40px;
+        margin-right: 80px;
+    }
+
+
+.main {
+    .titulo{ @include  flex (row, space-between, center);
+     background-image: url(https://superiorcads.edu.ar/imgd/certificacion-running-maraton-fondo-medio-fondo-trail-2-019334.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /*align-content: center;*/
+    }
+    .div{
+        h2 {
+            color: rgb(252, 252, 249);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size: 30px;
+            text-decoration: underline;
+            margin-bottom: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+    .texto-encabezado { @include  flex (row, space-between, center);
+        /*align-content: center;*/
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+body {
+    background-color: $background-body
+}
+
+
+
+.section{
+    h3 {
+    text-decoration: underline;
+    font-size: 25px;
+    color: rgb(252, 252, 249);
+    padding: 0;
+    text-align: center;
+    margin-top: 50px;
+    }
+
+    .contenedor { @include  flex (row, center, center);
+     /*display: flex;
+     justify-content: center;*/
+           
+    .caja {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 10px;
+        text-align: center;
+        }
+        .imagen-profesionales{
+        width: 100%;
+        height: 100%;
+        }      
+        .nuestros-profesionales {
+        width: 350px;
+        margin-bottom: 10px;
+        padding: 20px;
+        }
+        }
+
+}
+
+    
+    h4 {
+    font-size: 20px;
+    text-decoration: underline;
+    }
+    
+    
+    p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+        color: black;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+
+
+
+    .footer { @include flex (row, space-between, center);
+        height: 400px;
+       /* display: flex;
+        justify-content: space-between;*/
+        background-color: #ffc93b;
+        margin-top: 15%;
+        .imagen-redes-sociales {
+            width: 50px; 
+            height: 50px;
+            margin-left: 300px;
+        }
+        
+        .logo-footer {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        html,body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    
+ 
+        header { 
+            flex-direction: column;      
+            height: auto; 
+            text-align: center;
+            .logo {       
+                width: 60px; 
+                padding: 5px;
+            } 
+            li {     
+                font-size: 16px; 
+                margin-right: 0; 
+                margin-top: 5px; 
+            }
+        }    
+        
+        .titulo { 
+            height: 200px; 
+            background-position: top;
+        }
+    
+        
+     .seccion {
+        .nuestros-profesionales { 
+            width: 100%;        
+            padding: 10px;
+            box-sizing: border-box; 
+        } 
+        
+        .caja {        
+            width: 100%; 
+            height: auto;         
+            font-size: 12px;
+            box-sizing: border-box; 
+        }    
+    
+        
+        .contenedor {        
+            flex-direction: column;         
+            align-items: center;    
+            width: 100%; 
+        }    
+    
+     }  
+
+     .footer {
+        flex-direction: column;        
+        align-items: center;           
+        height: auto;                  
+        margin-top: 10%;               
+        width: 100%;
+        .imagen-redes-sociales {
+            flex-direction: column;                 
+            margin-bottom: 10px;           
+            width: 40px;                
+            height: 40px;                
+        }
+        .logo-footer {
+            width: 100px;
+        }
+        }
+    }
+   
