@@ -1,25 +1,26 @@
-/*variables*/
-/*mixin*/
-/*condicional*/
+@charset "UTF-8";
+/* Variables */
+/* Mixin */
+/* Condicional */
+body {
+  background-color: #bfff00;
+}
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*justify-content: space-between;
-  display: flex;*/
   height: 100px;
   background-color: #ffc93b;
   margin-bottom: 30px;
 }
-
-.logo {
+header .logo {
   display: flex;
   width: 100px;
   padding: 10px;
 }
-
-li {
+header li {
   display: inline-block;
   text-decoration: none;
   font-size: 24px;
@@ -35,16 +36,15 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-image: url(https://superiorcads.edu.ar/imgd/certificacion-running-maraton-fondo-medio-fondo-trail-2-019334.jpg);
+  background-image: url("https://superiorcads.edu.ar/imgd/certificacion-running-maraton-fondo-medio-fondo-trail-2-019334.jpg");
   height: 500px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  /*align-content: center;*/
 }
 .main .div h2 {
   color: rgb(252, 252, 249);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
   font-size: 30px;
   text-decoration: underline;
   margin-bottom: 5px;
@@ -56,48 +56,69 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*align-content: center;*/
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, serif;
   font-size: 20px;
   margin-bottom: 30px;
 }
 
-body {
-  background-color: #bfff00;
+/* Profesionales index */
+.section-profesionales {
+  padding: 50px 0;
 }
-
-.section h3 {
-  text-decoration: underline;
+.section-profesionales h3 {
   font-size: 25px;
-  color: rgb(252, 252, 249);
-  padding: 0;
+  color: #fcfcf9;
+  text-decoration: underline;
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 40px;
 }
-.section .contenedor {
+.section-profesionales .contenedor-profesionales {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /*display: flex;
-  justify-content: center;*/
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
 }
-.section .contenedor .caja {
+.section-profesionales .contenedor-profesionales .tarjeta-profesional {
   width: 300px;
-  height: 300px;
-  padding: 10px;
-  margin: 10px;
-  font-size: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
 }
-.section .contenedor .imagen-profesionales {
+.section-profesionales .contenedor-profesionales .tarjeta-profesional:hover {
+  transform: translateY(-5px);
+}
+.section-profesionales .contenedor-profesionales .tarjeta-profesional .imagen-profesional {
   width: 100%;
-  height: 100%;
-}
-.section .contenedor .nuestros-profesionales {
-  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
   margin-bottom: 10px;
-  padding: 20px;
+}
+.section-profesionales .contenedor-profesionales .tarjeta-profesional a {
+  display: inline-block;
+  margin: 10px 0;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.section-profesionales .contenedor-profesionales .tarjeta-profesional a:hover {
+  text-decoration: underline;
+}
+.section-profesionales .contenedor-profesionales .tarjeta-profesional h4 {
+  font-size: 18px;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.section-profesionales .contenedor-profesionales .tarjeta-profesional .descripcion-profesional {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 
 h4 {
@@ -106,7 +127,7 @@ h4 {
 }
 
 p {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, serif;
   font-size: 18px;
   color: black;
   margin-bottom: 30px;
@@ -119,15 +140,19 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 400px;
-  /* display: flex;
-   justify-content: space-between;*/
   background-color: #ffc93b;
   margin-top: 15%;
 }
-.footer .imagen-redes-sociales {
-  width: 50px;
-  height: 50px;
-  margin-left: 300px;
+.footer .contenedor-redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer .contenedor-redes-sociales .imagen-redes-sociales {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
 }
 .footer .logo-footer {
   width: 150px;
@@ -136,8 +161,137 @@ p {
   margin: 0 auto 20px;
 }
 
+/* Alimentación */
+.alimentacion {
+  padding: 20px;
+  margin: 20px 0;
+}
+.alimentacion .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.alimentacion .row .col {
+  text-align: center;
+}
+.alimentacion .row .col .imagenes-alimentacion {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+.alimentacion .row .col .buttons-alimentacion {
+  display: inline-block;
+  width: 80%;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.alimentacion .row .col .buttons-alimentacion:hover {
+  background-color: #45a049;
+}
+.alimentacion .row .col .texto-alimentacion {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Profesionales  */
+.main-profesionales {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+.main-profesionales .container-profesionales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.main-profesionales .container-profesionales .h2-profesionales {
+  grid-column: 1/-1;
+  font-size: 28px;
+  color: #333;
+  font-family: Cambria, serif;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.main-profesionales .container-profesionales .texto-profesionales {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  font-family: Cambria, serif;
+}
+.main-profesionales .container-profesionales .nuestros-profesionales-section {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Planificación */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+.video-container .videos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-container .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+.video-container .text-overlay h2 {
+  font-size: 100px;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Contacto */
+.mapa {
+  height: 500px;
+  width: 80%;
+  padding: 50px;
+  display: inline;
+  margin-left: 150px;
+}
+
+.formulario form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffc93b;
+  border-radius: 8px;
+}
+.formulario form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Media Query */
 @media (max-width: 768px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
     width: 100%;
   }
@@ -159,21 +313,76 @@ p {
     height: 200px;
     background-position: top;
   }
-  .seccion .nuestros-profesionales {
+  .section .contenedor {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
   }
-  .seccion .caja {
+  .section .contenedor .caja {
     width: 100%;
     height: auto;
     font-size: 12px;
     box-sizing: border-box;
   }
-  .seccion .contenedor {
-    flex-direction: column;
-    align-items: center;
+  .section .contenedor .imagen-profesionales {
     width: 100%;
+    height: 100%;
+  }
+  .alimentacion {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .alimentacion .row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .alimentacion .row .col .imagenes-alimentacion {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .alimentacion .row .col .buttons-alimentacion {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    font-size: 13px;
+  }
+  .alimentacion .row .col .texto-alimentacion {
+    font-size: 13px;
+    padding: 0 5px;
+  }
+  .main-profesionales .container-profesionales {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .main-profesionales .container-profesionales .h2-profesionales {
+    font-size: 24px;
+    text-align: center;
+  }
+  .main-profesionales .container-profesionales .texto-profesionales {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .main-profesionales .container-profesionales .nuestros-profesionales-section {
+    margin-top: 20px;
+  }
+  .video-container {
+    height: 30%;
+  }
+  .video-container .text-overlay h2 {
+    font-size: 50px;
+  }
+  .mapa {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .formulario form {
+    max-width: 100%;
+    padding: 15px;
+  }
+  .formulario form label {
+    font-size: 12px;
   }
   .footer {
     flex-direction: column;
@@ -183,7 +392,6 @@ p {
     width: 100%;
   }
   .footer .imagen-redes-sociales {
-    flex-direction: column;
     margin-bottom: 10px;
     width: 40px;
     height: 40px;

@@ -1,0 +1,486 @@
+
+/* Variables */
+$background-body: #bfff00;
+
+/* Mixin */
+@mixin flex($direction, $jcontent, $aitems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jcontent;
+  align-items: $aitems;
+}
+
+/* Condicional */
+$season: ninguno;
+
+@if $season == maraton-boston {
+  .titulo {
+    background-image: url("../multimedia/maratondeboston.webp");
+  }
+} @else if $season == maraton-tokio {
+  .titulo {
+    background-image: url("../multimedia/maraton-tokio-2025-elites.jpg");
+  }
+}
+
+body {
+  background-color: $background-body;
+}
+
+header {
+  @include flex(row, space-between, center);
+  height: 100px;
+  background-color: #ffc93b;
+  margin-bottom: 30px;
+
+  .logo {
+    display: flex;
+    width: 100px;
+    padding: 10px;
+  }
+
+  li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Bebas Neue", serif;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 40px;
+    margin-right: 80px;
+  }
+}
+
+.main {
+  .titulo {
+    @include flex(row, space-between, center);
+    background-image: url("https://superiorcads.edu.ar/imgd/certificacion-running-maraton-fondo-medio-fondo-trail-2-019334.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .div {
+    h2 {
+      color: rgb(252, 252, 249);
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 30px;
+      text-decoration: underline;
+      margin-bottom: 5px;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
+  .texto-encabezado {
+    @include flex(row, space-between, center);
+    font-family: Cambria, serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Profesionales index */
+.section-profesionales {
+    padding: 50px 0;
+  
+    h3 {
+      font-size: 25px;
+      color: #fcfcf9;
+      text-decoration: underline;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .contenedor-profesionales {
+      @include flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 20px;
+  
+      .tarjeta-profesional {
+        width: 300px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-5px);
+        }
+  
+        .imagen-profesional {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 6px;
+          margin-bottom: 10px;
+        }
+  
+        a {
+          display: inline-block;
+          margin: 10px 0;
+          color: #007bff;
+          font-weight: bold;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        h4 {
+          font-size: 18px;
+          text-decoration: underline;
+          margin-bottom: 5px;
+        }
+  
+        .descripcion-profesional {
+          font-size: 14px;
+          color: #333;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+h4 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+p {
+  font-family: Cambria, serif;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer {
+  @include flex(row, space-between, center);
+  height: 400px;
+  background-color: #ffc93b;
+  margin-top: 15%;
+
+  .contenedor-redes-sociales {
+    display: flex;
+    justify-content: center; // Centra horizontalmente los íconos
+    align-items: center; // Centra verticalmente si es necesario
+    gap: 10px;
+  
+    .imagen-redes-sociales {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0;
+    }
+  }
+  .logo-footer {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
+
+
+/* Alimentación */
+.alimentacion {
+    padding: 20px;
+    margin: 20px 0;
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  
+      .col {
+        text-align: center;
+  
+        .imagenes-alimentacion {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin-bottom: 10px;
+          object-fit: cover;
+        }
+  
+        .buttons-alimentacion {
+          display: inline-block;
+          width: 80%;
+          padding: 8px 12px;
+          font-size: 14px;
+          margin-bottom: 15px;
+          border: none;
+          background-color: #4CAF50;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #45a049;
+          }
+        }
+  
+        .texto-alimentacion {
+          font-size: 14px;
+          color: #333;
+          line-height: 1.5;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+/* Profesionales  */
+.main-profesionales {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  
+    .container-profesionales {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+  
+      .h2-profesionales {
+        grid-column: 1 / -1;
+        font-size: 28px;
+        color: #333;
+        font-family: Cambria, serif;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+  
+      .texto-profesionales {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+        font-family: Cambria, serif;
+      }
+  
+      .nuestros-profesionales-section {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+      }
+    }
+  }
+
+/* Planificación */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+
+  .videos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+
+    h2 {
+      font-size: 100px;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* Contacto */
+.mapa {
+  height: 500px;
+  width: 80%;
+  padding: 50px;
+  display: inline;
+  margin-left: 150px;
+}
+
+.formulario {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffc93b;
+    border-radius: 8px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+
+
+
+
+/* Media Query */
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+
+    .logo {
+      width: 60px;
+      padding: 5px;
+    }
+
+    li {
+      font-size: 16px;
+      margin-right: 0;
+      margin-top: 5px;
+    }
+  }
+
+  .titulo {
+    height: 200px;
+    background-position: top;
+  }
+
+  .section {
+    .contenedor {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  
+      .caja {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        box-sizing: border-box;
+      }
+      .imagen-profesionales{
+        width: 100%;
+        height: 100%;
+    }
+    
+    }
+  }
+
+
+
+
+  .alimentacion {
+    padding: 10px;
+    margin: 10px 0;
+
+    .row {
+      flex-direction: column;
+      gap: 30px;
+
+      .col {
+        .imagenes-alimentacion {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+
+        .buttons-alimentacion {
+          width: 90%;
+          margin: 0 auto 20px auto;
+          font-size: 13px;
+        }
+
+        .texto-alimentacion {
+          font-size: 13px;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+
+
+
+  .main-profesionales {
+    .container-profesionales {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      .h2-profesionales {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .texto-profesionales {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+
+      .nuestros-profesionales-section {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .video-container {
+    height: 30%;
+
+    .text-overlay h2 {
+      font-size: 50px;
+    }
+  }
+
+  .mapa {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .formulario form {
+    max-width: 100%;
+    padding: 15px;
+
+    label {
+      font-size: 12px;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 10%;
+    width: 100%;
+
+    .imagen-redes-sociales {
+      margin-bottom: 10px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo-footer {
+      width: 100px;
+    }
+  }
+}

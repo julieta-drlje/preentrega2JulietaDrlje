@@ -150,7 +150,7 @@ p {
 }
 
 .imagenes-alimentacion{
-    height: 300px;
+    height: 200px;
     width: 400px;
     display: flex;
     margin-bottom: 20px;
@@ -186,12 +186,16 @@ p {
     grid-row: 2 / 3;
     margin-top: 0;
   }
-  
+ 
   .nuestros-profesionales {
     grid-column: 2 / 3; 
     grid-row: 1 / 3; 
     margin-top: 80px;
+    border-radius: 80%;
+    
   }
+
+  
 
 
 
@@ -347,6 +351,7 @@ label {
         width: 100%; 
     }
 
+    /*alimentacion*/
     .alimentacion {
         display: flex;
         text-align: center;
@@ -378,7 +383,7 @@ label {
         margin-top: 10px;
     }
 
-    
+    /*profesionales*/
     .container-profesionales {
         grid-template-columns: 1fr; 
         margin-left: 0; 
@@ -406,7 +411,7 @@ label {
         margin-top: 40px; 
     }
 
-    /* Estilos para el video */
+    /* planificacion */
     .video-container {
         height: 30%; 
     }
@@ -416,7 +421,7 @@ label {
     }
 
 
-
+/*contactanos*/
     .mapa {
         width: 100%;            
         margin-left: 0;         
